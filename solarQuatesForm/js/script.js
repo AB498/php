@@ -125,7 +125,7 @@ function isValidPhone(phoneNumber) {
     return new Promise((resolve, reject) => {
         $.ajax({
             type: "get",
-            url: "https://php.ab498.repl.co/apiphone.php?phone=" + phoneNumber,
+            url: "apiphone.php?phone=" + phoneNumber,
             async: false,
             success: function (result) {
                 console.log(JSON.parse(result));
