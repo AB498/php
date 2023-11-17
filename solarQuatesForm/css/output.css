@@ -60,6 +60,10 @@
   width: 0.75rem
 }
 
+.w-full {
+  width: 100%
+}
+
 .flex-col {
   flex-direction: column
 }
@@ -68,8 +72,24 @@
   align-items: center
 }
 
+.justify-around {
+  justify-content: space-around
+}
+
+.justify-stretch {
+  justify-content: stretch
+}
+
 .gap-2 {
   gap: 0.5rem
+}
+
+.border-8 {
+  border-width: 8px
+}
+
+.border {
+  border-width: 1px
 }
 
 .text-center {
