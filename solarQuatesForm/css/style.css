@@ -1,0 +1,667 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+/* topbar start */
+.leftlogo img {
+    width: 60%;
+}
+
+.mainlogo img {
+    width: 150px;
+}
+
+.topbar_btn {
+    transition: transform 0.3s ease;
+}
+
+.topbar_btn:hover {
+    transform: scale(1.1);
+}
+
+button.btn.btn-rounded.topbar_btn {
+    background: #FFB400;
+    color: white;
+    font-weight: 500;
+    border-radius: 20px;
+    padding: 6px 22px;
+    font-size: 16px;
+}
+
+.topbarbtn.text-right {
+    text-align: right;
+}
+
+.row.topbarrow {
+    align-items: center;
+}
+
+header {
+    padding: 10px 0px;
+}
+
+/* topbar end */
+/* alert section start */
+section.alertsec {
+    background: red;
+    color: white;
+}
+
+section.alertsec h4 {
+    margin: 0;
+    font-weight: 800;
+    font-size: 20px;
+    padding: 8px 0px;
+}
+
+/* alert section end */
+/* banner section start */
+section.bannersection {
+    background-image: url(../image/Honest_Quotes_Header.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 40px 0px;
+}
+
+.listitem i {
+    color: #FFB400;
+    background: white;
+    border-radius: 100%;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.listitem {
+    display: flex;
+    align-items: center;
+    padding-bottom: 4px;
+}
+
+.listitem p {
+    margin: 0;
+    font-size: 18px;
+    color: white;
+}
+
+.contenttextbox h1 {
+    font-size: 45px;
+    font-weight: 800;
+    color: white;
+}
+
+h3.findh {
+    font-size: 35px;
+    font-weight: 800;
+    font-family: 'La Belle Aurore', cursive;
+    color: white;
+}
+
+.arrowimg img {
+    width: 26%;
+}
+
+.contenttextbox {
+    padding: 30px;
+}
+
+.lists {
+    padding-left: 42px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+/* form desgin start */
+.formbox input {
+    outline: none;
+    border: none;
+    color: #696969;
+    font-size: 18px;
+    font-weight: 400;
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 20px;
+    min-height: 47px;
+    margin-bottom: 13px;
+}
+
+.name {
+    display: flex;
+    justify-content: space-between;
+}
+
+input#first_name {
+    margin-right: 1%;
+}
+
+input#last_name {
+    margin-left: 1%;
+}
+
+label {
+    padding-left: 10px;
+    font-size: 18px;
+    color: #696969;
+    font-weight: 400;
+}
+
+h4.tittle {
+    color: #696969;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button.submitbtn {
+    font-size: 20px;
+    font-weight: 800;
+    border: none;
+    outline: none;
+    padding: 8px 22px;
+    border-radius: 40px;
+    background-color: #FFB400;
+    color: white;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.submitbtn:hover {
+    transform: scale(1.1);
+    background-color: #07B9E2;
+}
+
+.btndiv {
+    text-align: center;
+}
+
+.formbox {
+    background: #DBF2F9;
+    margin-top: 10px;
+    padding: 40px;
+    border-radius: 40px;
+    margin-bottom: 10px;
+}
+
+::placeholder {
+    color: #696969;
+    opacity: 0.7;
+}
+
+/* additional field */
+
+input[type="radio"]:checked+label {
+    background: #07B9E2;
+    color: white;
+    border: none;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.property label {
+    position: relative;
+    color: #696969;
+    display: inline-flex;
+    gap: 0.8em;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: #DBF2F9;
+    border-radius: 40px;
+    font-weight: 500;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 1px solid #696969;
+}
+
+.property {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.firstoption {
+    width: 50%;
+    margin-right: 2%;
+}
+
+.secondoption {
+    width: 50%;
+    margin-left: 2%;
+}
+
+.checkboxdiv input {
+    width: 16px;
+    margin: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.checkboxdiv {
+    display: flex;
+    align-items: center;
+    padding: 15px 0px;
+}
+
+p.newslettercheck {
+    padding: 0;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.checkboxdiv label {
+    border: none;
+    width: 38%;
+}
+
+p.propertytitle {
+    color: #696969;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* 
+.propertyInfo {
+} */
+/* additional field end */
+/* form design end */
+/* banner section end */
+
+/* reaseon section start */
+
+.heading h2 {
+    color: #696969;
+    font-weight: 800;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.heading p {
+    color: #696969;
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.icon i {
+    background: white;
+    color: #FFB400;
+    border-radius: 100%;
+    font-size: 42px;
+}
+
+.reason1 h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+}
+
+.reason1 p {
+    font-size: 18px;
+    color: white;
+}
+
+.reason1 {
+    background: #07B9E2;
+    text-align: center;
+    margin: 0px 10px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+section.reasonsection {
+    padding: 50px 0px;
+}
+
+/* reason section end */
+/* vetted section start */
+.contantbox {
+    background: #07B9E2;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    padding-bottom: 0;
+}
+
+.textdivv h2 {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.textdivv p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.imgdiv {
+    width: 30%;
+}
+
+.textdivv {
+    width: 70%;
+    padding-left: 20px;
+}
+
+.imgdiv img {
+    width: 95%;
+    transition: transform 0.3s ease;
+}
+
+.imgdiv img:hover {
+    transform: scale(1.1);
+}
+
+section.vettedsection {
+    background: #F2F2F2;
+    padding: 50px 0px;
+}
+
+/* vetted section end */
+/* trustpilot section start */
+.trustbox img {
+    width: 40%;
+}
+
+section.trustpilot {
+    padding: 50px 0px;
+}
+
+/* trustpilot section end */
+/* single section start */
+button.getQuotebtn {
+    background: #FFB400;
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-weight: 800;
+    padding: 6px 20px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+button.getQuotebtn:hover {
+    transform: scale(1.1);
+}
+
+.singlebox h2 {
+    font-size: 45px;
+    font-weight: 800;
+    color: white;
+}
+
+.single {
+    background-image: url(../image/Honest_Quotes_Header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0px;
+}
+
+/* single section end */
+/* energy section start */
+.imgquestionbox {
+    position: relative;
+
+}
+
+.imgquestionbox img {
+    width: 100%;
+    border-radius: 40px;
+}
+
+.q_icon {
+    width: 40px;
+    height: 40px;
+    background: #FFB400;
+    text-align: center;
+    align-items: center;
+    border-radius: 30px;
+    color: white;
+    position: absolute;
+    content: "";
+    top: 14%;
+    left: 32%;
+    cursor: pointer;
+}
+
+.q_icon span {
+    font-size: 29px;
+    font-weight: 800;
+}
+
+.q_text {
+    position: absolute;
+    content: "";
+    top: 22%;
+    background: #FFB400;
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+    left: 9%;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+.sec_icon {
+    left: 53%;
+    top: 54%;
+}
+
+.sec_text {
+    left: 34%;
+    top: 62%;
+
+}
+
+.visible {
+    opacity: 1;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.textcontainerbox h3 {
+    font-size: 35px;
+    font-weight: 900;
+    color: #696969;
+}
+
+.textcontainerbox p {
+    font-size: 18px;
+    color: #696969;
+}
+
+section.energysection {
+    padding: 70px 0px;
+}
+
+.row.energy_row {
+    align-items: center;
+}
+
+/* energy section end */
+/* optionsection start */
+
+.options_sec {
+    background-image: url(../image/WhatsApp-Image-2022-02-18-at-2.04.59-PM.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 50px 0px;
+}
+
+.headdiv {
+    background: #07B9E2;
+    color: white;
+    text-align: center;
+    padding: 30px 0px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.firstOption {
+    text-align: center;
+    background: white;
+    border-radius: 20px;
+}
+
+.bodylist p {
+    border-bottom: 2px dotted #FFB400;
+    line-height: 59px;
+    margin: 0;
+    color: #696969;
+    font-size: 18px;
+}
+
+.bodylist p:last-child {
+    border: none;
+}
+
+.bodylist {
+    padding: 10px 50px;
+}
+
+.headdiv h2 {
+    font-size: 25px;
+    margin: 0;
+    font-weight: 800;
+}
+
+.optionbtn {
+    padding-bottom: 25px;
+}
+
+.titleinfo h2 {
+    font-size: 35px;
+    color: #696969;
+    font-weight: 800;
+    text-align: center;
+}
+
+.titleinfo p {
+    font-size: 18px;
+    text-align: center;
+    color: #696969;
+}
+
+.titleinfo {
+    padding-bottom: 30px;
+}
+
+/* option section end */
+/* sponsor section  */
+
+
+.img_box img {
+    width: 85%;
+    transition: 0.3s ease-in-out;
+}
+
+.img_box img:hover {
+    transform: scale(1.1);
+}
+
+.row.sponsor_row {
+    align-items: center;
+}
+
+.img_box {
+    text-align: center;
+}
+
+.txtinfo.text-center h2 {
+    font-size: 35px;
+    font-weight: 800;
+    color: #696969;
+}
+
+.txtinfo.text-center p {
+    color: #696969;
+    font-size: 18px;
+}
+
+section.sponsorSection {
+    padding: 50px 0px;
+    padding-bottom: 30px;
+}
+
+/* sponsor section end */
+/* question section start */
+.question {
+    background-image: url(../image/Honest_Quotes_Header.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px 0px;
+}
+
+.box1 {
+    float: right;
+}
+
+.box2 {
+    float: center;
+}
+
+.box2 .listitem {
+    justify-content: center;
+}
+
+.txttitle.text-center h2 {
+    font-size: 35px;
+    font-weight: 800;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.buttondiv.text-center {
+    margin-top: 20px;
+}
+
+/* section section end */
+/* footer start */
+footer.footer {
+    background: #696969;
+    color: white;
+    padding: 10px 0px;
+}
+
+.footerrightbox h2 {
+    font-size: 20px;
+    font-weight: 800;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+.footerleftbox h2 {
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0;
+}
+
+/* footer end */
+.propertydiv {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+}

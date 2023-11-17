@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Solar Quotes Form &#8211; Honest Quotes</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- fontawesome link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css.map">
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- fav icon -->
+  <link rel="icon" href="image/fav.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <!-- top bar start -->
+    <div class="container">
+      <div class="row topbarrow">
+
+        <div class="col-xs-12 col-sm-4 leftlogocol">
+          <div class="leftlogo">
+            <img src="image/trustpilot-logo-stars.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 mainlogocol">
+          <div class="mainlogo text-center">
+            <img src="image/Honest_Quotes-01-1.png" alt="">
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 topbtncol">
+          <div class="topbarbtn text-right">
+            <button class="btn btn-rounded topbar_btn">Explore</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- top bar end -->
+  </header>
+  <section class="alertsec ">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-xs-12">
+          <h4 class="text-center">Save Up To 70% On Your Energy Bills.</h4>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <main>
+
+    <section class="bannersection">
+      <div class="container">
+        <div class="row bannerrow">
+
+          <div class="col-xs-12 col-sm-6 textcol">
+            <div class="contenttextbox">
+              <h1 class="text-center">Get Solar Panels and Save on Bills</h1>
+              <div class="lists">
+                <div class="listitem">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <p>Save up to 70% on bills.</p>
+                </div>
+                <div class="listitem">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <p>Nothing to pay upfront.</p>
+                </div>
+                <div class="listitem">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <p>Earn £40,000 over 25 years.</p>
+                </div>
+                <div class="listitem">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <p>Beat the UK energy price crisis.</p>
+                </div>
+              </div>
+              <div class="find text-center">
+
+                <h3 class="findh">find out today!
+                </h3>
+                <div class="arrowimg">
+                  <img src="image/white-hand-drawn-arrow-500x363-1.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 formcol">
+            <div class="formbox" id="quote">
+              <form action="">
+                <h4 class="tittle">Check If You Qualify</h4>
+                <div class="name">
+                  <div class="flex flex-col">
+                    <input type="text" placeholder="First Name" name="name" id="first_name" required>
+                    <div class="flex mb-2 items-center gap-2 text-red-500 first_name-error font-medium hidden">
+                      <img src="image/close.png" alt="" class="flex w-3 aspect-square">
+                      <div class="error-text">Text</div>
+                    </div>
+                  </div>
+                  <div class="flex flex-col">
+                    <input type="text" placeholder="Last Name" name="name" id="last_name" required>
+                    <div class="flex mb-2 items-center gap-2 text-red-500 last_name-error font-medium hidden">
+                      <img src="image/close.png" alt="" class="flex w-3 aspect-square">
+                      <div class="error-text">Text</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="postcode">
+                  <input type="text" id="postcode" name="postcode" placeholder="Postcode" required>
+                  <div class="flex mb-2 items-center gap-2 text-red-500 postcode-error font-medium hidden">
+                    <img src="image/close.png" alt="" class="flex w-3 aspect-square">
+                    <div class="error-text">Text</div>
+                  </div>
+                </div>
+                <div class="email">
+                  <input type="email" placeholder="Email" id="email" name="email" required>
+                  <div class="flex mb-2 items-center gap-2 text-red-500 email-error font-medium hidden">
+                    <img src="image/close.png" alt="" class="flex w-3 aspect-square">
+                    <div class="error-text">Text</div>
+                  </div>
+                </div>
+                <div class="phonenumber">
+                  <input type="tel" placeholder="Phone (Example: 0123456789)" id="phone_number" required>
+                  <div class="flex mb-2 items-center gap-2 text-red-500 phone-error font-medium hidden">
+                    <img src="image/close.png" alt="" class="flex w-3 aspect-square">
+                    <div class="error-text">Text</div>
+                  </div>
+                </div>
+                <div class="propertydiv">
+                  <div class="propertyInfo">
+                    <p class="propertytitle">Select Property Type:</p>
+                  </div>
+                  <div class="property">
+                    <div class="firstoption">
+                      <input type="radio" name="propertyType" value="Homeowner" id="home_Owner" checked>
+                      <label for="home_Owner">Homeowner</label>
+                    </div>
+                    <div class="secondoption">
+                      <input type="radio" name="propertyType" id="tenant" value="Tenant">
+                      <label for="tenant">Tenant</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex mb-2 items-center gap-2 text-red-500 propertyType-error font-medium hidden">
+                  <img src="image/close.png" alt="" class="flex w-3 aspect-square">
+                  <div class="error-text">Text</div>
+                </div>
+
+                <div class="checkboxdiv">
+                  <input type="checkbox" id="checkinput" name="">
+                  <label for="checkinput"> Join our newsletter.
+                  </label>
+
+                </div>
+                <div class="btndiv">
+
+                  <button type="submit" class="submitbtn">Get a Quote <i class="fa-solid fa-right-long"></i></button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+    <!-- banner section end -->
+
+    <section class="reasonsection">
+      <div class="container">
+        <div class="heading">
+          <h2>Why Install Solar On Your Home?
+          </h2>
+          <p>Next generation solar and battery systems are capable of producing large amounts of free electricity from
+            daylight which can drastically cut your bills – right at the time when energy bills are at their highest
+            point ever.
+
+          </p>
+        </div>
+        <div class="row reasonrow">
+
+          <div class="col-xs-12 col-sm-4 reasoncol">
+            <div class="reason1">
+              <div class="icon">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <h2>Cut Bills By Up To 70%
+              </h2>
+              <p>Generating your own energy reduces the need to buy expensive energy from the grid.</p>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-4 reasoncol">
+            <div class="reason1">
+              <div class="icon">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <h2>Save Up To £40,000
+
+              </h2>
+              <p>Savings over your solar panels’ 25 year guaranteed lifespan can add up to £40,000 in most cases.
+
+              </p>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-4 reasoncol">
+            <div class="reason1">
+              <div class="icon">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <h2>No Upfront Costs
+
+              </h2>
+              <p>Get solar on your roof with no upfront costs and flexible finance options spread over 10 years.
+
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- reason section end -->
+
+    <section class="vettedsection">
+      <div class="container">
+        <div class="row vettedrow">
+
+          <div class="col-xs-12 col-sm-6 vettedcol">
+            <div class="contantbox">
+              <div class="imgdiv">
+                <img src="image/Honest-Quotes_200x200-5-1.png" alt="">
+              </div>
+              <div class="textdivv">
+                <h2>Vetted Installers
+                </h2>
+                <p>We find the right installers to work with so you save time and money.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 vettedcol">
+            <div class="contantbox">
+              <div class="imgdiv">
+                <img src="image/Honest-Quotes_200x200-4-1.png" alt="">
+              </div>
+              <div class="textdivv">
+                <h2>Fast Response
+                </h2>
+                <p>We get your quotes quickly so you aren't left waiting for a reply.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- vetted section end -->
+
+    <section class="trustpilot">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-xs-12">
+            <div class="trustbox text-center">
+              <img src="image/trustpilot-logo-stars-1024x121.jpg" alt="">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- trustpilot section end -->
+
+    <section class="single">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-xs-12">
+            <div class="singlebox text-center">
+              <h2>Get Your Honest Quote
+              </h2>
+              <a href="#quote">
+                <button class="getQuotebtn">Get a Quote</button>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- single section end -->
+
+    <section class="energysection">
+      <div class="container">
+        <div class="row energy_row">
+
+          <div class="col-xs-12 col-sm-6 energy_col">
+            <div class="imgquestionbox">
+              <img src="image/HQ_Solar-Panel_Main.jpeg" alt="">
+              <div class="firstquestion">
+                <div class="q_icon" id="icon">
+                  <span>?</span>
+
+                </div>
+                <div class="q_text" id="text" style="display:none">
+                  <span>Solar works even when cloudy
+                  </span>
+                </div>
+              </div>
+
+              <div class="secondquestion">
+                <div class="q_icon sec_icon" id="secicon">
+                  <span>?</span>
+
+                </div>
+                <div class="q_text sec_text" id="sectext" style="display:none">
+                  <span>Modern black solar panels
+                  </span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 energy_col">
+            <div class="textcontainerbox text-center">
+              <h3>Make Your Own Energy</h3>
+              <p>If you can’t beat them, join them! This is the most accurate way to summarise the energy market in the
+                UK. Switching and fixed deals now have minimal impact in your energy bills – they will only continue to
+                rise. <br>
+                <br>
+                Solar Panels will produce you free electricity during daylight hours, this energy can be used in one or
+                two ways. The first is the battery can store the energy for you to use on an evening this on average
+                results in reduction of your electricity spends of on average 70%. <br>
+                <br>
+                Any surplus power it can be sold to the grid through the smart export guarantee scheme – This is where
+                your energy company will send you tax free cash for supplying them with your free green energy. <br>
+                <br>
+                The most impressive part is the smart technology inside of the battery will scour the market and work
+                out the best possible times to purchase the energy in for you.
+              </p>
+
+              <a href="#quote">
+                <button class="getQuotebtn">Get a Quote</button>
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- energy section end -->
+
+
+    <section class="options_sec">
+      <div class="container">
+        <div class="titleinfo">
+          <h2>Solar System Options
+          </h2>
+          <p>See below for some of the most common solar panel systems.
+
+          </p>
+        </div>
+        <div class="row options_row">
+
+          <div class="col-xs-12 col-sm-4 options_col">
+            <div class="firstOption">
+              <div class="headdiv">
+                <h2>Solar & Battery
+                </h2>
+              </div>
+              <div class="bodylist">
+                <p>Save up to 70% on bills.</p>
+                <p>Export energy via the SEG tariff </p>
+                <p>Install in less than 1 day.
+                </p>
+              </div>
+              <div class="optionbtn">
+                <a href="#quote">
+                  <button class="getQuotebtn">Get a Quote</button>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-4 options_col">
+            <div class="firstOption">
+              <div class="headdiv">
+                <h2>Solar Only
+
+                </h2>
+              </div>
+              <div class="bodylist">
+                <p>Save small amounts on bills.
+                </p>
+                <p>Export energy via the SEG tariff.
+                </p>
+                <p>Installs in half day.
+
+                </p>
+              </div>
+              <div class="optionbtn">
+                <a href="#quote">
+                  <button class="getQuotebtn">Get a Quote</button>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-4 options_col">
+            <div class="firstOption">
+              <div class="headdiv">
+                <h2>Battery Only
+
+                </h2>
+              </div>
+              <div class="bodylist">
+                <p>Add a battery to your panels.
+                </p>
+                <p>Access up to 70% savings.
+                </p>
+                <p>Installs in half a day.
+
+                </p>
+              </div>
+              <div class="optionbtn">
+                <a href="#quote">
+                  <button class="getQuotebtn">Get a Quote</button>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- option section end -->
+
+    <section class="sponsorSection">
+      <div class="container">
+        <div class="txtinfo text-center">
+          <h2>Choose Leading Brands
+          </h2>
+          <p>Our installers offer a variety of leading quality solar brands to suit a variety of needs.
+
+
+
+          </p>
+        </div>
+        <div class="row sponsor_row">
+
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 sponsor_col">
+            <div class="img_box">
+              <img src="image/LG-1024x386.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 sponsor_col">
+            <div class="img_box">
+              <img src="image/Tesla-Name-e1634035458712.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 sponsor_col">
+            <div class="img_box">
+              <img src="image/grow.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 sponsor_col">
+            <div class="img_box">
+              <img src="image/Social-Energy-Logo-1024x169.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 sponsor_col">
+            <div class="img_box">
+              <img src="image/Sunpower.jpg" alt="">
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 sponsor_col">
+            <div class="img_box">
+              <img src="image/Panasonic.png" alt="">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- sponsor section end -->
+
+    <section class="question">
+      <div class="container">
+        <div class="txttitle text-center">
+          <h2>Why Get An Honest Quote? </h2>
+        </div>
+        <div class="row quesRow">
+
+          <div class="col-xs-12 col-sm-4 quesCol">
+            <div class="box1">
+              <div class="listitem">
+                <i class="fa-solid fa-circle-check"></i>
+                <b>
+                  <p>Get the Best Price
+                  </p>
+                </b>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-4 quesCol">
+            <div class="box2">
+              <div class="listitem">
+                <i class="fa-solid fa-circle-check"></i>
+                <b>
+                  <p>Get a Quick Response
+                  </p>
+                </b>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-4 quesCol">
+            <div class="box3">
+              <div class="listitem">
+                <i class="fa-solid fa-circle-check"></i>
+                <b>
+                  <p>Get Fully Vetted Installers
+                  </p>
+                </b>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="buttondiv text-center">
+          <a href="#quote">
+            <button class="getQuotebtn">Get a Quote</button>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- question section end -->
+
+
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="row footerrow">
+
+        <div class="col-xs-12 col-sm-6 footercol">
+          <div class="footerleftbox">
+            <h2>INSTALLER SIGN UP</h2>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 footercol">
+          <div class="footerrightbox">
+            <h2>PRIVACY POLICY</h2>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <!-- footer end -->
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- custom js -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
