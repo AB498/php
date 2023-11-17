@@ -73,7 +73,7 @@ document.querySelector(".submitbtn").addEventListener("click", async (e) => {
         errored = true;
     }
     if (lastname.length < 3) {
-        lastnameError.querySelector(".error-text").textContent = "Please enter your full first last.";
+        lastnameError.querySelector(".error-text").textContent = "Please enter your full last name.";
         lastnameError.classList.remove("hidden");
         errored = true;
     }
