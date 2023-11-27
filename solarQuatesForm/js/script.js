@@ -106,7 +106,7 @@ document.querySelector(".submitbtn").addEventListener("click", async (e) => {
         return;
     }
 
-    window.location.href = "https://honestquotes.co.uk/thank-you-solar-quote/";
+    window.location.href = "/thankyou.html";
 })
 
 function isValidUKostcode(pc) {
