@@ -109,12 +109,9 @@ document.querySelector(".submitbtn").addEventListener("click", async (e) => {
     window.location.href = "/thankyou.html";
 })
 
-function isValidUKostcode(pc) {
-    var postcodeRegEx = /[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}/;
-    if (postcodeRegEx.test(pc))
-        return true;
-    else
-        return false;
+function isValidUKPostcode(pc) {
+    var postcodeRegEx = /[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? ?[0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}/;
+    return postcodeRegEx.test(pc);
 }
 
 
