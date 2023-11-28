@@ -77,7 +77,7 @@ document.querySelector(".submitbtn").addEventListener("click", async (e) => {
         lastnameError.classList.remove("hidden");
         errored = true;
     }
-    if (!isValidUKostcode(postcode)) {
+    if (!isValidUKPostcode(postcode)) {
         postcodeError.querySelector(".error-text").textContent = "Please enter a genuine UK Postcode.";
         postcodeError.classList.remove("hidden");
         errored = true;
