@@ -344,7 +344,6 @@ function postData() {
         };
 
         console.log("requestData", requestData);
-        return;
         $.ajax({
             type: "post",
             url: "api.php",
