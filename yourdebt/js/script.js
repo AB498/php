@@ -148,10 +148,10 @@ next2.addEventListener('click', (event) => {
         emailError.innerText = "Email is valid";
         emailForm.style.display = "none";
         phoneForm.style.display = "block";
-    } else if (!validateEmail(email)) {
-        emailError.innerText = "Please enter a valid email address";
         currentStep++;
         updateProgressbar();
+    } else if (!validateEmail(email)) {
+        emailError.innerText = "Please enter a valid email address";
     }
 
 
