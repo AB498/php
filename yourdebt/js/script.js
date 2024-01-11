@@ -133,9 +133,9 @@ next.addEventListener('click', () => {
     } else {
         nameForm.style.display = "none";
         emailForm.style.display = "block";
+        currentStep++;
+        updateProgressbar();
     }
-    currentStep++;
-    updateProgressbar();
 
 });
 next2.addEventListener('click', (event) => {
@@ -150,9 +150,9 @@ next2.addEventListener('click', (event) => {
         phoneForm.style.display = "block";
     } else if (!validateEmail(email)) {
         emailError.innerText = "Please enter a valid email address";
+        currentStep++;
+        updateProgressbar();
     }
-    currentStep++;
-    updateProgressbar();
 
 
 });
@@ -167,12 +167,12 @@ sumbitbtn.addEventListener('click', async (event) => {
         // phoneError.innerText = "Phone is valid";
         await postData();
         window.location.href = "thankyou.html";
+        currentStep++;
+        updateProgressbar();
     } else {
         phoneError.innerText = "Please enter a valid UK phone number";
     }
 
-    currentStep++;
-    updateProgressbar();
 });
 
 
