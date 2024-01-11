@@ -1,3 +1,5 @@
+
+// ?debt=£10%2C000&property=Owned&creditors=Less+than+2
 // Get the full URL of the current page
 var currentURL = window.location.href;
 
@@ -7,6 +9,10 @@ var urlParams = new URLSearchParams(window.location.search);
 // Get the values of the "source" and "clickid" parameters
 var sourceParam = urlParams.get("source");
 var clickIdParam = urlParams.get("clickid");
+var debtValue = urlParams.get("debt");
+var propertyValue = urlParams.get("property");
+var creditorsValue = urlParams.get("creditors");
+console.log(debtValue, propertyValue, creditorsValue);
 
 // faq
 $(document).ready(function () {
@@ -59,10 +65,64 @@ let sumbitbtn = document.getElementById('submitbtn');
 let progress = document.querySelector('.progressbar');
 //debt question
 let debtOpton = document.querySelectorAll('.first-step input[name="debt"]');
+
+let deb = Number(debtValue.replace(/[£,\+]/g, ""));
+if (10000 >= deb) {
+    console.log(debtOpton[3].value);
+    debtOpton[3].checked = true;
+    debtForm.style.display = "none";
+    peopleForm.style.display = "block";
+    currentStep++;
+    updateProgressbar();
+} else if (6000 <= deb && deb <= 10000) {
+    console.log(debtOpton[2].value);
+    debtOpton[2].checked = true;
+    debtForm.style.display = "none";
+    peopleForm.style.display = "block";
+    currentStep++;
+    updateProgressbar();
+}
+else if (2000 <= deb && deb <= 6000) {
+    console.log(debtOpton[1].value);
+    debtOpton[1].checked = true;
+    debtForm.style.display = "none";
+    peopleForm.style.display = "block";
+    currentStep++;
+    updateProgressbar();
+} else if (deb <= 2000) {
+    console.log(debtOpton[0].value);
+    debtOpton[0].checked = true;
+    debtForm.style.display = "none";
+    peopleForm.style.display = "block";
+    currentStep++;
+    updateProgressbar();
+} else {
+
+}
 //people question
 let peopleOption = document.querySelectorAll('.second-step input[name="people');
+peopleOption.forEach((option) => {
+    if (option.value.toLowerCase() == creditorsValue.toLowerCase()) {
+        console.log(option.value);
+        option.checked = true;
+        peopleForm.style.display = "none";
+        propertyForm.style.display = "block";
+        currentStep++;
+        updateProgressbar();
+    }
+})
 // property question
 let propertyOption = document.querySelectorAll('.third-step input[name="property"]');
+propertyOption.forEach((option) => {
+    if (option.value.toLowerCase() == propertyValue.toLowerCase()) {
+        console.log(option.value);
+        option.checked = true;
+        propertyForm.style.display = "none";
+        locationForm.style.display = "block";
+        currentStep++;
+        updateProgressbar();
+    }
+})
 // location question
 let locationOption = document.querySelectorAll('.four-step input[name="location"]');
 // employstatus question
@@ -128,6 +188,7 @@ employOption.forEach((option) => {
 next.addEventListener('click', () => {
     // full name
     let nameField = document.getElementById('full_name').value;
+    window.nameValue = nameField;
     if (nameField == "") {
         alert('Please Enter Your Name');
     } else {
@@ -142,6 +203,7 @@ next2.addEventListener('click', (event) => {
     event.preventDefault();
     // email 
     let email = document.getElementById('email').value;
+    window.emailValue = email;
     // email error
     let emailError = document.querySelector('.emailError');
     if (validateEmail(email)) {
@@ -159,7 +221,7 @@ next2.addEventListener('click', (event) => {
 sumbitbtn.addEventListener('click', async (event) => {
     event.preventDefault();
     let phone = document.getElementById('phone').value;
-    window.phone = phone;
+    window.phoneValue = phone;
     let phoneError = document.querySelector('.phoneError');
 
     //phone validate code
@@ -267,9 +329,9 @@ function postData() {
             key: "42c4ea91c662a693e6479788c105bf6f",
             lead: {
                 campid: "CREDITFIX-DEBT",
-                fullname: nameField,
-                email,
-                phone1: phone,
+                fullname: nameValue,
+                email: emailValue,
+                phone1: phoneValue,
                 country: [...locationOption].reduce((a, b) => b.checked ? b.value : a, null),
                 debt_amount: [...debtOpton].reduce((a, b) => b.checked ? b.value : a, null),
                 number_creditors: [...peopleOption].reduce((a, b) => b.checked ? b.value : a, null),
@@ -282,6 +344,7 @@ function postData() {
         };
 
         console.log("requestData", requestData);
+        return;
         $.ajax({
             type: "post",
             url: "api.php",
@@ -301,4 +364,13 @@ function postData() {
             },
         });
     });
+}
+
+function check(e) {
+    e.preventDefault();
+    let debt_amount = document.querySelector('input[name="debt"]').value;
+    let number_creditors = document.querySelector('select[name="creditors"]').value;
+    let property_type = document.querySelector('select[name="property"]').value;
+    console.log(window.location.origin + `/calculator.html?debt=${debt_amount}&property=${property_type}&creditors=${number_creditors}`)
+    window.location.href = window.location.origin + `/calculator.html?debt=${debt_amount}&property=${property_type}&creditors=${number_creditors}`
 }
