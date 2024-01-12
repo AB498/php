@@ -52,6 +52,7 @@ let prev4 = document.getElementById('five_prev');
 let prev5 = document.getElementById('six_prev');
 let prev6 = document.getElementById('seven_prev');
 
+updateProgressbar();
 
 // next btn
 let next = document.getElementById('next_question');
@@ -102,7 +103,7 @@ else if (2000 <= deb && deb <= 6000) {
 //people question
 let peopleOption = document.querySelectorAll('.second-step input[name="people');
 peopleOption.forEach((option) => {
-    if (option.value.toLowerCase() == creditorsValue.toLowerCase()) {
+    if (option.value?.toLowerCase() == creditorsValue?.toLowerCase()) {
         console.log(option.value);
         option.checked = true;
         peopleForm.style.display = "none";
@@ -114,7 +115,7 @@ peopleOption.forEach((option) => {
 // property question
 let propertyOption = document.querySelectorAll('.third-step input[name="property"]');
 propertyOption.forEach((option) => {
-    if (option.value.toLowerCase() == propertyValue.toLowerCase()) {
+    if (option.value?.toLowerCase() == propertyValue?.toLowerCase()) {
         console.log(option.value);
         option.checked = true;
         propertyForm.style.display = "none";
