@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,12 +15,14 @@ input[type="radio"]:checked+label {
 input[type="radio"] {
     display: none;
 }
+
 .forminfo h2 {
     color: #333333;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
 }
+
 section.multistepform {
     background: #00741A;
     padding: 100px 0px;
@@ -32,6 +34,7 @@ section.multistepform {
     margin: auto;
     border-radius: 20px;
 }
+
 label {
     padding: 16px 1rem;
     width: 100%;
@@ -78,11 +81,13 @@ label {
     width: 100% !important;
     padding-top: 20px;
 }
+
 label:hover {
     cursor: pointer;
     background: #0B9236;
     color: white;
 }
+
 button.prev_btn {
     border: none;
     padding: 10px 30px;
@@ -93,13 +98,16 @@ button.prev_btn {
     border-radius: 4px;
     cursor: pointer;
 }
+
 .buttondiv {
     text-align: center;
     padding-top: 30px;
 }
+
 .fifthoption {
     margin-top: 24px;
 }
+
 .namediv input {
     width: 100%;
     outline: none;
@@ -125,7 +133,8 @@ button.prev_btn {
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25);
     margin-top: 48px;
 }
-.submtibutton button{
+
+.submtibutton button {
     outline: none;
     border: none;
     background: #0B9236;
@@ -134,14 +143,17 @@ button.prev_btn {
     padding: 1rem 3rem 1rem 3rem !important;
     border-radius: 4px;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25);
-    margin-top: 30px;  
+    margin-top: 30px;
 }
+
 .submtibutton {
     text-align: center;
 }
+
 .namediv {
     padding-top: 30px;
 }
+
 .infodivform p {
     font-size: 10px;
     font-weight: bold;
@@ -161,6 +173,7 @@ button.prev_btn {
 .infodivform {
     margin-top: 40px;
 }
+
 .firstcheckbox {
     display: flex;
     align-items: center;
@@ -179,6 +192,7 @@ button.prev_btn {
     width: 50%;
     margin: auto;
 }
+
 .noticepform p {
     text-align: center;
     font-size: 10px;
@@ -187,6 +201,7 @@ button.prev_btn {
     padding: 10px 43px;
     padding-top: 30px;
 }
+
 .lastpform p {
     margin: 0;
     font-size: 10px;
@@ -202,6 +217,7 @@ button.prev_btn {
 .lastpform {
     padding-top: 20px;
 }
+
 form {
     display: flex;
     justify-content: start;
@@ -212,6 +228,7 @@ form {
 .form-outer {
     overflow: hidden;
 }
+
 .forminfo.first-step {
     background: white;
     height: 100%;
@@ -219,9 +236,10 @@ form {
     border-radius: 0px 0px 20px 20px;
     width: 600px !important;
 }
-.second-step{
+
+.second-step {
     display: none;
-    background:white;
+    background: white;
     height: 100%;
     width: 600px !important;
     border-radius: 0px 0px 20px 20px;
@@ -233,52 +251,58 @@ form {
     width: 600px !important;
     border-radius: 0px 0px 20px 20px;
 }
-.four-step{
+
+.four-step {
     display: none;
-    background:white;
+    background: white;
     height: 100%;
     width: 600px !important;
     border-radius: 0px 0px 20px 20px;
 
 
 }
-.five-step{
+
+.five-step {
     display: none;
-    background:white;
+    background: white;
     height: 100%;
     width: 600px !important;
     border-radius: 0px 0px 20px 20px;
 
 
 }
-.six-step{
-    display: none;
-    background:white;
-    height: 100%;
-    width: 600px !important;
-    border-radius: 0px 0px 20px 20px;
 
-    
-
-}
-.seven-step{
+.six-step {
     display: none;
-    background:white;
+    background: white;
     height: 100%;
     width: 600px !important;
     border-radius: 0px 0px 20px 20px;
 
 
+
 }
-.eight-step{
+
+.seven-step {
     display: none;
-    background:white;
+    background: white;
     height: 100%;
     width: 600px !important;
     border-radius: 0px 0px 20px 20px;
 
 
 }
+
+.eight-step {
+    display: none;
+    background: white;
+    height: 100%;
+    width: 600px !important;
+    border-radius: 0px 0px 20px 20px;
+
+
+}
+
 /*  */
 .progressbar {
     display: flex;
@@ -298,6 +322,7 @@ form {
 .progressbar step {
     border: 2px solid white;
 }
+
 .progressbar .step .check i {
     border: 2px solid #C2E4CD;
     border-radius: 70%;
@@ -308,6 +333,7 @@ form {
     font-weight: bold;
     color: #C2E4CD;
 }
+
 .progressbar .step .check i {
     border: 2px solid #C2E4CD;
     border-radius: 70%;
@@ -323,10 +349,14 @@ form {
     font-size: 19px;
     text-align: center;
 }
-.step:last-child:before,.step:last-child:after {
-   display: none;
+
+.step:last-child:before,
+.step:last-child:after {
+    display: none;
 }
-.step:before,.step:after {
+
+.step:before,
+.step:after {
     position: absolute;
     content: '';
     height: 2px;
@@ -335,27 +365,64 @@ form {
     background: #C2E4CD;
     bottom: 46%;
 }
+
 .step {
     position: relative;
 }
-.active i{
+
+.active i {
     color: #0B9236 !important;
     border-color: #0B9236 !important;
 }
+
 .check.active i {
     background: orange;
     color: white !important;
 }
+
 .check.firstprog i {
     border: 2px solid !important;
     color: orange;
 }
+
 .active {
     background: #0B9236;
     color: white !important;
     border: 2px solid #0B9236 !important;
 }
-.emailError{
+
+.active::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -2.6rem;
+    transform: translateY(-50%);
+    background: #0B9236;
+    height: 2px;
+    width: 2.5rem;
+}
+
+.firstprog i::after {
+    display: none;
+}
+
+.check i.current {
+    color: #0B9236 !important;
+    border: 2px solid #0B9236 !important;
+}
+
+.check i.current::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -2.6rem;
+    transform: translateY(-50%);
+    background: #0B9236;
+    height: 2px;
+    width: 2.5rem;
+}
+
+.emailError {
     font-weight: bold;
     color: #0B9236;
 }

@@ -66,8 +66,8 @@ let progress = document.querySelector('.progressbar');
 //debt question
 let debtOpton = document.querySelectorAll('.first-step input[name="debt"]');
 
-let deb = Number(debtValue.replace(/[£,\+]/g, ""));
-if (10000 >= deb) {
+let deb = Number(debtValue?.replace(/[£,\+]/g, "") || -1);
+if (10000 <= deb) {
     console.log(debtOpton[3].value);
     debtOpton[3].checked = true;
     debtForm.style.display = "none";
@@ -89,7 +89,7 @@ else if (2000 <= deb && deb <= 6000) {
     peopleForm.style.display = "block";
     currentStep++;
     updateProgressbar();
-} else if (deb <= 2000) {
+} else if (0 <= deb && deb <= 2000) {
     console.log(debtOpton[0].value);
     debtOpton[0].checked = true;
     debtForm.style.display = "none";
@@ -128,7 +128,7 @@ let locationOption = document.querySelectorAll('.four-step input[name="location"
 // employstatus question
 let employOption = document.querySelectorAll('.five-step input[name="employment_status"]');
 // full name
-let nameField = document.getElementById('full_name').value;
+let nameField = document.getElementById('full_name');
 
 //phone
 let phone = document.querySelectorAll('.eight-step input[name="phone"]');
@@ -185,7 +185,7 @@ employOption.forEach((option) => {
         }
     });
 });
-next.addEventListener('click', () => {
+next?.addEventListener('click', () => {
     // full name
     let nameField = document.getElementById('full_name').value;
     window.nameValue = nameField;
@@ -199,7 +199,7 @@ next.addEventListener('click', () => {
     }
 
 });
-next2.addEventListener('click', (event) => {
+next2?.addEventListener('click', (event) => {
     event.preventDefault();
     // email 
     let email = document.getElementById('email').value;
@@ -218,7 +218,7 @@ next2.addEventListener('click', (event) => {
 
 
 });
-sumbitbtn.addEventListener('click', async (event) => {
+sumbitbtn?.addEventListener('click', async (event) => {
     event.preventDefault();
     let phone = document.getElementById('phone').value;
     window.phoneValue = phone;
@@ -239,37 +239,37 @@ sumbitbtn.addEventListener('click', async (event) => {
 
 
 
-prev1.addEventListener('click', () => {
+prev1?.addEventListener('click', () => {
     currentStep--;
     peopleForm.style.display = "none";
     debtForm.style.display = "block";
     updateProgressbar(1);
 });
-prev2.addEventListener('click', () => {
+prev2?.addEventListener('click', () => {
     currentStep--;
     peopleForm.style.display = "block";
     propertyForm.style.display = "none";
     updateProgressbar();
 });
-prev3.addEventListener('click', () => {
+prev3?.addEventListener('click', () => {
     currentStep--;
     propertyForm.style.display = "block";
     locationForm.style.display = "none";
     updateProgressbar();
 });
-prev4.addEventListener('click', () => {
+prev4?.addEventListener('click', () => {
     currentStep--;
     locationForm.style.display = "block";
     statusForm.style.display = "none";
     updateProgressbar();
 });
-prev5.addEventListener('click', () => {
+prev5?.addEventListener('click', () => {
     currentStep--;
     statusForm.style.display = "block";
     nameForm.style.display = "none";
     updateProgressbar();
 });
-prev6.addEventListener('click', () => {
+prev6?.addEventListener('click', () => {
     currentStep--;
     nameForm.style.display = "block";
     emailForm.style.display = "none";
@@ -280,10 +280,12 @@ prev6.addEventListener('click', () => {
 function updateProgressbar() {
     progressSteps.forEach(step => {
         step.classList.remove('active');
+        step.classList.remove('current');
     });
     for (let i = 0; i < currentStep; i++) {
         progressSteps[i].classList.add('active');
     }
+    progressSteps[currentStep].classList.add('current');
 }
 
 function isChecked(option) {
